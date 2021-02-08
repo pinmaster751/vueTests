@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import {asyncFetchUser} from "@/components/questions/12/helpers/asyncFetchUser";
+import {asyncFetchUser} from "@/components/questions/11/helpers/asyncFetchUser";
 
 export default {
   name: "ComponentForTest",

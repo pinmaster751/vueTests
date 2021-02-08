@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ComponentForTest from "@/components/questions/12/ComponentForTest";
+import ComponentForTest from "@/components/questions/11/ComponentForTest";
 
 export default {
   name: 'Playground',

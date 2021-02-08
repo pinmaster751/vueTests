@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO: провести ревью компонента, и сделать рефакторинг -->
   <div>
     <header class="header">
       <nav class="header-nav" />
