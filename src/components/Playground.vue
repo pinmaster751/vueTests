@@ -1,15 +1,15 @@
 <template>
   <div class="hello">
-    <ComponentForTest/>
+    <RenderFunction />
   </div>
 </template>
 
 <script>
-import ComponentForTest from "@/components/questions/11/ComponentForTest";
+import RenderFunction from "@/components/questions/12/RenderFunction";
 
 export default {
   name: 'Playground',
-  components: {ComponentForTest},
+  components: {RenderFunction},
   props: {
     msg: String
   }

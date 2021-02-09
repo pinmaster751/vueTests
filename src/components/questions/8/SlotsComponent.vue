@@ -1,8 +1,8 @@
 <template>
   <div>
     <SlotsComponentUser>
-      <!-- FIXME: не выводится username -->
-      <span>Username: {{username}}</span>
+      <!-- FIXME: при переопределении слота, username не отображается -->
+      <span>Login: {{username}}</span>
     </SlotsComponentUser>
   </div>
 </template>

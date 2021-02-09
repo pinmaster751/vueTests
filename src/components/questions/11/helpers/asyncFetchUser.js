@@ -2,6 +2,7 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
+//Эмуляция работы бека
 export function asyncFetchUser() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
