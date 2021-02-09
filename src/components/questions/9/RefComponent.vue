@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "ComputedComponent",
+  name: "RefComponent",
   data() {
     return {
       action: 'https://example.com'
