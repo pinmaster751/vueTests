@@ -10,7 +10,8 @@ export default {
   name: "RenderFunction",
   data() {
     return {
-      isActive: true
+      isActive: true,
+      name: 'Vasyan'
     }
   },
 }
