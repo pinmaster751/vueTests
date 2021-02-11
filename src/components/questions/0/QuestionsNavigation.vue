@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
 <!--  TODO: Реализовать переключение роутов заданий при переключении селекта  -->
-    <div class="warning">Навигация через select - нереализована. Необходимо реализовать</div>
+    <div class="warning">Навигация через select - не реализована. Необходимо реализовать</div>
     Выберите задание:
     <select v-model="question">
       <option value="">не выбрано</option>
