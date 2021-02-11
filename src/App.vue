@@ -1,18 +1,15 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Playground msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Playground from "@/components/Playground";
-
+import QuestionsNavigation from "@/components/questions/0/QuestionsNavigation";
 export default {
   name: 'App',
-  components: {
-    Playground
-  }
+  components: {QuestionsNavigation},
 }
 </script>
 
