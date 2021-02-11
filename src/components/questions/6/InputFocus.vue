@@ -9,9 +9,11 @@
 <script>
 export default {
   name: "InputFocus",
-  props: {
-    showEmailInput: Boolean
-  },
+  data() {
+    return {
+      showEmailInput: false
+    }
+  }
 }
 </script>
 

@@ -16,11 +16,10 @@
 <script>
 export default {
   name: "LoginType",
-  props: {
-    loginType: {
-      type: String,
-      default: 'phone'
-    },
+  data() {
+    return {
+      loginType: 'phone'
+    }
   },
   methods: {
     switchMethod() {

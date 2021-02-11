@@ -1,15 +1,15 @@
 <template>
   <div class="hello">
-    <RenderFunction />
+    <SlotsComponent />
   </div>
 </template>
 
 <script>
-import RenderFunction from "@/components/questions/12/RenderFunction";
+import SlotsComponent from "@/components/questions/8/SlotsComponent";
 
 export default {
   name: 'Playground',
-  components: {RenderFunction},
+  components: {SlotsComponent},
   props: {
     msg: String
   }
