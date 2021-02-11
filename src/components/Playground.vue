@@ -1,15 +1,15 @@
 <template>
   <div class="hello">
-    <SlotsComponent />
+    <ClickComponent />
   </div>
 </template>
 
 <script>
-import SlotsComponent from "@/components/questions/8/SlotsComponent";
+import ClickComponent from "@/components/questions/11/ClickComponent";
 
 export default {
   name: 'Playground',
-  components: {SlotsComponent},
+  components: {ClickComponent},
   props: {
     msg: String
   }
