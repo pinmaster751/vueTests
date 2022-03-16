@@ -4,6 +4,7 @@
     <!-- FIXME: Vue не рекомендует использовать одновременно v-for и v-if, необходимо внести изменения-->
     <li
         v-for="user in users"
+        v-if="user.isActive"
         :key="user.id"
     >
       {{ user.name }}
