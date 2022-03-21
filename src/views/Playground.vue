@@ -1,11 +1,10 @@
 <template>
   <div class="hello">
-    <h1>Playground</h1>
-    <QuestionsNavigation :current="question" />
+    <h1>Playground!</h1>
+    <QuestionsNavigation @currentUpdate="changeQuestion" :current="question" />
     <div class="component-wrapper">
       <component v-if="question" :is="`question-${question}`" />
     </div>
-
   </div>
 </template>
 
@@ -26,8 +25,13 @@ export default {
   name: 'Playground',
   components,
   props: {
-    question: String,
+    question: String
   },
+  methods: {
+    changeQuestion(newValue) {
+      this.question = newValue
+    }
+  }
 }
 </script>
 

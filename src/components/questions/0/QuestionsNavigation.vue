@@ -3,7 +3,7 @@
 <!--  TODO: Реализовать переключение роутов заданий при переключении селекта  -->
     <div class="warning">Навигация через select - не реализована. Необходимо реализовать</div>
     Выберите задание:
-    <select v-model="question">
+    <select @change="changeCurrent" v-model="question">
       <option value="">не выбрано</option>
       <option :key="question" v-for="question in questions" :value="question">{{question}}</option>
     </select>
@@ -18,7 +18,7 @@ export default {
   props: {
     current: {},
   },
-  data() {
+  data () {
     return {
       question: 1,
     }
@@ -31,6 +31,11 @@ export default {
       return getQuestionsList();
     },
   },
+  methods: {
+    changeCurrent() {
+      this.$emit('currentUpdate', this.question)
+    }
+  }
 }
 </script>
 

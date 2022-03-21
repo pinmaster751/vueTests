@@ -9,7 +9,7 @@
 import QuestionsNavigation from "@/components/questions/0/QuestionsNavigation";
 export default {
   name: 'App',
-  components: {QuestionsNavigation},
+  components: {QuestionsNavigation}
 }
 </script>
 
