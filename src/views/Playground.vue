@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>Playground!</h1>
-    <QuestionsNavigation @currentUpdate="changeQuestion" :current="question" />
+    <QuestionsNavigation v-model="question" />
     <div class="component-wrapper">
       <component v-if="question" :is="`question-${question}`" />
     </div>
@@ -26,11 +26,6 @@ export default {
   components,
   props: {
     question: String
-  },
-  methods: {
-    changeQuestion(newValue) {
-      this.question = newValue
-    }
   }
 }
 </script>
