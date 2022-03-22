@@ -1,5 +1,4 @@
 <template>
-  <!-- FIXME: отправка формы перезагружает страницу после submit -->
   <form @submit.prevent="onSubmit">
     <input placeholder="name" v-model="name" id="name" /><br  /><br />
     <input placeholder="last name" v-model="lastName" id="lastName" />
@@ -7,7 +6,6 @@
     <input type="submit" value="submit" />
   </form>
 </template>
-
 <script>
 export default {
   name: "FormSubmit",
@@ -26,5 +24,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
