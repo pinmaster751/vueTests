@@ -1,15 +1,13 @@
 <template>
   <div>
-    <!-- FIXME: При первичном рендере компонента все ок. Но при вводе числа, компонент все равно выдает ошибку -->
     <span v-if="!Number.isInteger(value)" style="color: red">Вы ввели не число</span><br />
-    <input v-model="value" />
+    <input v-model.number="value" />
   </div>
-
 </template>
 
 <script>
 export default {
-name: "WrongType",
+  name: "WrongType",
   data() {
     return {
       value: 1
