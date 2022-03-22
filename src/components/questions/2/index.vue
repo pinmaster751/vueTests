@@ -6,7 +6,6 @@
     <input type="submit" value="submit" />
   </form>
 </template>
-
 <script>
 export default {
   name: "FormSubmit",
@@ -23,7 +22,5 @@ export default {
   },
 }
 </script>
-
 <style scoped>
-
 </style>
