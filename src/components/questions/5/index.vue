@@ -1,10 +1,9 @@
 <template>
-  <!-- TODO: Реализовать компонент кастомного инпута. Всe свойства, события и аттрибуты input должны работать и в CustomInput,-->
   <div>
     <p>
       {{text}}
     </p>
-    <CustomInput v-model="text" />
+    <CustomInput v-model="text" ref="ci" />
   </div>
 </template>
 
@@ -18,6 +17,13 @@ export default {
       text: ''
     }
   },
+  mounted () {
+    this.$watch(
+      
+      "$refs.ci.val", new_val => this.text = new_val
+    
+    )
+  }
 }
 </script>
 
