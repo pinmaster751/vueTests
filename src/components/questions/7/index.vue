@@ -1,23 +1,42 @@
 <template>
     <div>
-      <input :value="value" class="phone" placeholder="phone" />
-      <span v-if="error">Не правильно введен номер телефона</span>
+      <input v-model="value" class="phone" placeholder="+7 (XXX) XXX-XX-XX" /><br>
+      <span v-if="error">Не правильно введен номер телефона. Номер должен соответствовать виду +7 (XXX) XXX-XX-XX</span>
     </div>
 
 </template>
 
 <script>
-// TODO: реализовать валидацию входных данных свойства и валидацию input - тип телефон, вида +7(XXX)-XXX-XX-XX
 export default {
   name: "PhoneValidation",
   props: {
-    value: {},
-  },
-  data() {
-    return {
-      error: Boolean
+    mask: {
+      type: RegExp,
+      default() {
+        return /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/
+        //не только МСК
+        //return /^\+\d+?\s\(\d+?\)\s\d{2,3}-\d{2}-\d{2}$/
+      }
+    },
+    initial: {
+      type: String,
+      default: ''
     }
   },
+  data () {
+    return {
+      error: Boolean,
+      value: String
+    }
+  },
+  created () {
+    this.value = this.initial
+  },
+  watch: {
+    value(val) {
+      this.error = val.match(this.mask) ? false : true
+    }
+  }
 }
 </script>
 
