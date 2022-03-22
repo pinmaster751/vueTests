@@ -1,10 +1,9 @@
 <template>
   <div>
-    <!-- FIXME: при нажатии на кнопку send форма отправляется по старому адресу -->
-    <form ref="form" :action="action" >
+    <form ref="form" :action="action">
       <input placeholder="Enter email" name="email" />
     </form>
-    <button @click="submit">Send</button>
+    <button @click.prevent="submit">Send</button>
   </div>
 
 </template>
@@ -18,9 +17,11 @@ export default {
     }
   },
   methods: {
-    submit() {
+    submit(e) {
       this.action = 'https://test.com';
-      this.$refs.form.submit();
+      this.$nextTick(() => {
+        this.$refs.form.submit();
+      })
     }
   },
 }
