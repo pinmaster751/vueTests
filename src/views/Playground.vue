@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <h1>Playground!</h1>
-    <QuestionsNavigation v-model="question" />
+    <QuestionsNavigation :current="question" ref="qn" />
     <div class="component-wrapper">
-      <component v-if="question" :is="`question-${question}`" />
+      <component v-if="route" :is="`question-${route}`" />
     </div>
   </div>
 </template>
@@ -26,6 +26,17 @@ export default {
   components,
   props: {
     question: String
+  },
+  mounted () {
+    this.$watch(
+      "$refs.qn.question",
+      (new_value) => (this.route = new_value)
+    );
+  },
+  data () {
+    return {
+      route: this.question
+    }
   }
 }
 </script>
