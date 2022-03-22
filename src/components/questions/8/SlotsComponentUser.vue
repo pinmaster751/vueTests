@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot v-bind="{username}">
+    <slot>
       Username: {{username}}
     </slot>
   </div>
@@ -8,12 +8,7 @@
 
 <script>
 export default {
-name: "SlotsComponentUser",
-  data() {
-    return {
-      username: 'Vasyan'
-    }
-  },
+  name: "SlotsComponentUser"
 }
 </script>
 
