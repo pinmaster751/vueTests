@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot v-bind="{username}">
+    <slot :username="username">
       Username: {{username}}
     </slot>
   </div>
