@@ -1,7 +1,10 @@
 <template>
   <div>
     <SlotsComponentUser>
-      <span>Login: {{username}}</span>
+      <template v-slot:default="{username}">
+        <!-- FIXME: при переопределении слота, username не отображается -->
+        <span>Login: {{username}}</span>
+      </template>
     </SlotsComponentUser>
   </div>
 </template>
