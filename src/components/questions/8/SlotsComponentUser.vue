@@ -8,12 +8,7 @@
 
 <script>
 export default {
-name: "SlotsComponentUser",
-  data() {
-    return {
-      username: 'Vasyan'
-    }
-  },
+  name: "SlotsComponentUser"
 }
 </script>
 

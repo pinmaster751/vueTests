@@ -14,6 +14,11 @@ import SlotsComponentUser from "@/components/questions/8/SlotsComponentUser";
 export default {
   name: "SlotsComponent",
   components: {SlotsComponentUser},
+  data () {
+    return {
+      username: 'Vasyan'
+    }
+  }
 }
 </script>
 
